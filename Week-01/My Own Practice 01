@@ -1,0 +1,11 @@
+# My Own Practice
+
+favorite_books = ["Atomic Habits", "Deep Work", "Python Crash Course"]
+print(favorite_books)
+
+employee = {
+    "Name": "Sara",
+    "Department": "Finance",
+    "Experience": 3
+}
+print(employee)
