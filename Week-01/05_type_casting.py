@@ -31,10 +31,74 @@ contains these data types:
 | `is_passed` | `True`        | Boolean (`bool`) |
 
 # ==========================================================
-
-
+    
+#  Quick Revision Table  
+| Function  | Purpose            | Example     |
+| --------- | ------------------ | ----------- |
+| `int()`   | Convert to Integer | `int("25")` |
+| `float()` | Convert to Float   | `float(25)` |
+| `str()`   | Convert to String  | `str(25)`   |
+| `bool()`  | Convert to Boolean | `bool(1)`   |
     
 # ==========================================================
+# Explanation 
+    # What is Type Casting?
+        # Type Casting means changing one data type into another.
+        # For example:
+            # Example 01:
+                    age = "25"
+                    # Here, 25 is a string because it is inside quotation marks.
+                    # If we want to perform mathematical operations, we first convert it into an integer.
+
+            # Example 02: 
+                    age = int(age)
+                    # Now age becomes an integer.
+
+# 01: int()
+# Used to convert a value into an integer.
+age = "25"
+age = int(age)
+print(age)
+# Output
+# 25
+
+# 02: float()
+# Used to convert a value into a decimal number.
+marks = 90
+marks = float(marks)
+print(marks)
+# Output
+# 90.0
+
+# 03: str()
+# Used to convert a value into text (string).
+roll_no = 101
+roll_no = str(roll_no)
+print(roll_no)
+# Output
+# 101
+#Now it is a string instead of an integer.
+
+# 04: bool()
+# Converts a value into either True or False.
+
+print(bool(1))
+# Output
+# True
+
+print(bool(0))
+# Output
+# False
+
+print(bool(""))
+# Output
+# False
+
+print(bool("Python"))
+# Output
+# True
+
+# ==========================================================    
 # Course : Artificial Intelligence with Python
 # Week   : 01
 # File   : 05_type_casting.py
