@@ -10,7 +10,18 @@
       Set
       Dictionary
 # ===========================================
+# List
+fruits = ["Apple", "Banana", "Mango"]
 
+# Tuple
+colors = ("Red", "Green", "Blue")
+
+# Set
+numbers = {10, 20, 30}
+
+# Dictionary
+student = {"Name": "Ali",
+    "Age": 22}
 
 # ==================================================
 # LIST
