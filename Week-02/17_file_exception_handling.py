@@ -11,11 +11,45 @@
 #     ✔ Avoid program crashes
 #     ✔ Understand real-world robustness
 # ==========================================================
+"""
+What is an Exception?
+---------------------
+An exception is an error that occurs while the program is running.
 
+Example:
+If we try to open a file that does not exist:
 
+    with open("missing.txt", "r") as file:
+        print(file.read())
 
+Python raises:
+    FileNotFoundError
 
+The program stops immediately.
 
+Why use try and except?
+-----------------------
+The try block runs code that may cause an error.
+
+The except block handles the error instead of crashing the program.
+
+Example:
+
+try:
+    with open("missing.txt", "r") as file:
+        print(file.read())
+except FileNotFoundError:
+        print("File not found!")
+
+Output:
+    File not found!
+
+Key Points:
+- try -> Execute code that may cause an error.
+- except -> Handle the error.
+- FileNotFoundError -> Raised when the file does not exist.
+- Exception handling keeps the program running.
+"""
 
 # ----------------------------------------------------------
 # Why do we need Exception Handling in Files?
