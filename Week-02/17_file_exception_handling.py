@@ -1,4 +1,3 @@
-# ==========================================================
 # Course : Artificial Intelligence using Python
 # Week   : 02
 # File   : 17_file_exception_handling.py
@@ -64,7 +63,67 @@ Key Points:
 #
 # With handling:
 # ✔ Program stays safe
-# ----------------------------------------------------------
+# ---------------------------------------------------------
+# Examples :
+
+
+File Not Found Error (Without Handling)
+# This will crash if file does not exist
+
+with open("missing.txt", "r") as file:
+    print(file.read())
+
+""" 
+#OUTPUT: FileNotFoundError                         Traceback (most recent call last)
+Cell In[1], line 1
+----> 1 with open("missing.txt", "r") as file:
+      2     print(file.read())
+
+File ~\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:343, in _modified_open(file, *args, **kwargs)
+    336 if file in {0, 1, 2}:
+    337     raise ValueError(
+    338         f"IPython won't let you open fd={file} by default "
+    339         "as it is likely to crash IPython. If you know what you are doing, "
+    340         "you can use builtins' open."
+    341     )
+--> 343 return io_open(file, *args, **kwargs)
+
+FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'. 
+"""
+
+# ---------------------------------------------------------
+
+try:
+    with open("missing.txt", "r") as file:
+        print(file.read())
+except FileNotFoundError:
+    print("File not found!")
+
+
+#OUTPUT : File not found!
+
+# ---------------------------------------------------------
+
+filename = "my_info.txt"
+name = "GitHub Copilot"
+age = 1
+
+# Try to read existing file; if missing, create it with name and age, then read.
+try:
+    with open(filename, "r") as fin:
+        print(fin.read())
+except FileNotFoundError:
+    with open(filename, "w") as fout:
+        fout.write(f"{name}\n{age}\n")
+    with open(filename, "r") as fin:
+        print(fin.read())
+
+
+#OUTPUT : GitHub Copilot
+#OUTPUT : 1
+
+# ---------------------------------------------------------
+
 
 
 # ==========================================================
