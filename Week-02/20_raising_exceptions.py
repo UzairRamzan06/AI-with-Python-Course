@@ -1,4 +1,3 @@
-# ==========================================================
 # Course : Artificial Intelligence using Python
 # Week   : 02
 # File   : 20_raising_exceptions.py
@@ -11,6 +10,26 @@
 #     ✔ Validate user input
 #     ✔ Build rule-based error systems
 # ==========================================================
+age = -3
+if age < 0:
+    raise ValueError("Age cannot be Negative!")
+
+#OUTPUT : 
+
+"""
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[2], line 2
+      1 if age < 0:
+----> 2     raise ValueError("Age cannot be Negative!")
+
+ValueError: Age cannot be Negative!
+
+"""
+
+
+
+
 
 # ----------------------------------------------------------
 # What does "raise" mean?
