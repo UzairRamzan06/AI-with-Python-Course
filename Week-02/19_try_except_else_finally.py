@@ -1,4 +1,3 @@
-# ==========================================================
 # Course : Artificial Intelligence using Python
 # Week   : 02
 # File   : 19_try_except_else_finally.py
@@ -11,6 +10,72 @@
 #     ✔ Learn else block behavior
 #     ✔ Understand finally block usage
 # ==========================================================
+
+num = int(input("Enter a number: "))
+print(10 / num)
+# Enter a number:  7
+#OUTPUT : 1.4285714285714286
+
+# If Enter a number : 0
+# then python will show error following error: 
+
+"""
+---------------------------------------------------------------------------
+ZeroDivisionError                         Traceback (most recent call last)
+Cell In[4], line 2
+      1 num = int(input("Enter a number: "))
+----> 2 print(10 / num)
+
+ZeroDivisionError: division by zero
+---------------------------------------------------------------------------
+"""
+
+# if Enter a number:  k  
+# then python will show error following error:
+
+"""
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[8], line 1
+----> 1 num = int(input("Enter a number: "))
+      2 print(10 / num)
+
+ValueError: invalid literal for int() with base 10: 'k'
+---------------------------------------------------------------------------
+"""
+# try and excep :
+
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+except ValueError:
+    print("That's not a number!")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
+# If Enter a number:  0
+# OUTPUT : You can't divide by zero!
+
+# If Enter a number:  k
+# OUTPUT : That's not a number!
+
+# try , excep , else and finally :
+
+try:
+    print("Running code...")
+except:
+    print("Error found!")
+else:
+    print("No errors found!")
+finally:
+    print("Done!")
+    
+# OUTPUT : Running code...
+# OUTPUT : No errors found!
+# OUTPUT : Done!
+        
 
 # ----------------------------------------------------------
 # Exception Handling Structure
