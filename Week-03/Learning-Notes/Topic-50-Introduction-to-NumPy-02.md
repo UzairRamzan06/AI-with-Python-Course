@@ -1,4 +1,6 @@
-# **Topic 51: Introduction to NumPy** 
+# **Topic 50: Introduction to NumPy**
+# **Why NumPy & Environment Setup**
+
 
 # 🎓 Simple Explanation (From Scratch)
 # What is NumPy?
