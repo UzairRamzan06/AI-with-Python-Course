@@ -1,4 +1,3 @@
-# ==========================================================
 # Course : Artificial Intelligence using Python
 # Week   : 02
 # File   : 21_custom_exceptions.py
@@ -12,11 +11,42 @@
 #     ✔ Apply in real-world validation systems
 # ==========================================================
 
+class InvalidAgeError(Exception):
+    pass
+age = int(input("Enter age: "))
+if age < 0:
+    raise InvalidAgeError(f"Age cannot be negative! , {age}")
+    
+# If Enter age negative :  -3
+# Then Python Show following error
+# OUTPUT : 
+"""---------------------------------------------------------------------------
+InvalidAgeError                           Traceback (most recent call last)
+Cell In[2], line 3
+      1 age = int(input("Enter age: "))
+      2 if age < 0:
+----> 3     raise InvalidAgeError(f"Age cannot be negative! , {age}")
 
+InvalidAgeError: Age cannot be negative! , -3
 
+"""
+# ----------------------------------------------------------
 
+try:
+    age = int(input("Enter age: "))
+    if age < 0:
+        raise InvalidAgeError(f"Age cannot be negative! , {age}")
+except InvalidAgeError as e:
+    print(e)
+    
+# If Enter age negative :  -7
+# Then Python Show following error
+# OUTPUT :  Age cannot be negative! , -7
 
 # ----------------------------------------------------------
+
+
+
 # What is a Custom Exception?
 # ----------------------------------------------------------
 # A custom exception is:
